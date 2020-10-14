@@ -5,6 +5,7 @@ import team
 higher = 1.148698355
 lower = 0.8705505633
 
+#function to generate result between 2 teams
 def generate_result(home_team, away_team):
     home_score = generate_home_score(home_team,away_team)
     away_score = generate_away_score(home_team, away_team)
@@ -14,7 +15,8 @@ def generate_result(home_team, away_team):
     print(home_team.name,home_score,'-',away_score,away_team.name)
 
     return home_team.name, home_score, away_score, away_team.name
-
+#function to calculate the home team score - uses an equation which takes into consideration team and opponent's skill level
+#and whether they are playing home or away
 def generate_home_score(home,away):
     home_skill = home.skill_level / 3
     away_skill = away.skill_level / 3
@@ -28,7 +30,8 @@ def generate_home_score(home,away):
         home_goals += 1
         
     return (home_goals - 1)
-
+#function to calculate the away team score - uses an equation which takes into consideration team and opponent's skill level
+#and whether they are playing home or away
 def generate_away_score(home,away):
     home_skill = home.skill_level/3
     away_skill = away.skill_level/3
