@@ -1,3 +1,4 @@
+#function to generate league fixtures
 
 def generate_fixtures(teams):
     s = []
